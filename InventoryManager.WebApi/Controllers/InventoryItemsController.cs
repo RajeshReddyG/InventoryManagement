@@ -13,9 +13,13 @@ namespace InventoryManager.WebApi.Controllers
     [ApiController]
     public class InventoryItemsController : ControllerBase
     {
-        private readonly InventoryContext _context;
+        private readonly IInventoryContext _context;
 
-        public InventoryItemsController(InventoryContext context)
+        public InventoryItemsController()
+        {
+                
+        }
+        public InventoryItemsController(IInventoryContext context)
         {
             _context = context;
         }
@@ -51,7 +55,8 @@ namespace InventoryManager.WebApi.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(inventoryItem).State = EntityState.Modified;
+            //_context.Entry(inventoryItem).State = EntityState.Modified;
+            _context.MarkAsModified(inventoryItem);
 
             try
             {
