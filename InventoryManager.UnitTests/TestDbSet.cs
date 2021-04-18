@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace InventoryManager.UnitTests
 {
-    public class TestDbSet<T> : DbSet<T>, IQueryable, IEnumerable<T>
+    public class TestDbSet<T> : DbSet<T>, IDbSet<T>
         where T : class
     {
         ObservableCollection<T> _data;

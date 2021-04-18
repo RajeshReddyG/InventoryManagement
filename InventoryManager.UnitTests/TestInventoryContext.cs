@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 //using System.Data.Entity;
+//using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -14,7 +15,9 @@ namespace InventoryManager.UnitTests
     {
         public TestInventoryContext()
         {
-            //this.InventoryItems = new TestDbSet<InventoryItem>();
+            //this.InventoryItems = new TestInventoryDbSet();
+            //this.InventoryItems = new TestInventoryDbSet();
+
         }
         public DbSet<InventoryItem> InventoryItems { get; set; }
 

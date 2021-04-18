@@ -1,17 +1,21 @@
 ﻿using InventoryManager.WebApi.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace InventoryManager.UnitTests
 {
-    class TestInventoryDbSet : TestDbSet<InventoryItem>
+    class TestInventoryDbSet : TestDbSet<InventoryItem>, IDbSet<InventoryItem>
     {
-        public override InventoryItem Find(params object[] keyValues)
+        public override async Task<InventoryItem> FindAsync(params object[] keyValues)
         {
-            return this.SingleOrDefault(product => product.Id == (int)keyValues.Single());
+            return await Task.Run(() =>
+            {
+                return this.SingleOrDefault(product => product.Id == (int)keyValues.Single());
+            });
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using InventoryManager.WebApi.Controllers;
 using InventoryManager.WebApi.Models;
+using Moq;
 using NUnit.Framework;
 using System;
 using System.Collections.Generic;
@@ -16,14 +17,22 @@ namespace InventoryManager.UnitTests
         [Test]
         public void PostProduct_ShouldReturnSameItem()
         {
+
+            var inventoryDbSet = new TestDbSet<InventoryItem>();
+            inventoryDbSet.Add(GetSampleItem());
+
+            var contextMock = new Mock<InventoryContext>();
+            contextMock.Setup(dbContext => dbContext.InventoryItems).Returns(inventoryDbSet);
+
             var controller = new InventoryItemsController(new TestInventoryContext());
+            //var controller = new InventoryItemsController(new InventoryContext());
 
             var item = GetSampleItem();
 
             var result =
                 controller.PostInventoryItem(item).Result;
 
-            Assert.IsNotNull(result);
+            Assert.IsNotNull(result); 
             //Assert.AreEqual(result.RouteName, "DefaultApi");
             //Assert.AreEqual(result.RouteValues["id"], result.Content.Id);
             //Assert.AreEqual(result.Content.Name, item.Name);

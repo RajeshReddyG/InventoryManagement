@@ -23,6 +23,7 @@ namespace InventoryManager.WebApi
             var configurationSection = Configuration.GetSection("ConnectionStrings:InventoryDb");
             services.AddDbContext<InventoryContext>(options => options.UseSqlServer(configurationSection.Value));
             services.AddControllers();
+            services.AddScoped<IInventoryContext, InventoryContext>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

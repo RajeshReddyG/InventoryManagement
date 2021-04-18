@@ -15,10 +15,10 @@ namespace InventoryManager.WebApi.Controllers
     {
         private readonly IInventoryContext _context;
 
-        public InventoryItemsController()
-        {
+        //public InventoryItemsController()
+        //{
                 
-        }
+        //}
         public InventoryItemsController(IInventoryContext context)
         {
             _context = context;
