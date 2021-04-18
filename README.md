@@ -2,7 +2,7 @@
 The API Controller has functions that responds for GET, POST, PUT and DELETE requests which are useful for Listing, Adding, Modifying and Deleting inventory items in the database table.
  # ShopBridge Backend
 
-"ShopBridge" needs you to build a website that helps track the different items they have for sale.
+"ShopBridge" needs a backend solution to build a website that helps track the different items they have for sale.
 
 ## Problem Statement
 
@@ -116,7 +116,7 @@ This Should return list of Objects
 ]
 ```
 ### GET
-Call URL https://localhost:44364/api/InventoryItems/1 with GET:
+Call URL https://localhost:44364/api/InventoryItems/1 with GET
 This Should return Object with Id:1
 ```json
 {
@@ -133,13 +133,6 @@ This Should return Object with Id:1
 }
 ```
 ### DELETE
-Call URL https://localhost:44364/api/InventoryItems/6 with DELETE:
+Call URL https://localhost:44364/api/InventoryItems/6 with DELETE
 This Should delete Object with Id:6
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
