@@ -6,8 +6,8 @@ The API Controller has functions that responds for GET, POST, PUT and DELETE req
 
 ## Problem Statement
 
-Create a backend solution for Product functionality to be used by Product
-Admin, and perform below actions:
+**Create a backend solution for Product functionality to be used by Product
+Admin, and perform below actions:**
 1. Add a new item to the inventory (The item should require a name, description, and price
 as basic fileds, think of additional information that would be useful)
 2. Modify an item in the inventory.
@@ -32,6 +32,7 @@ update-database
 ```
 
 ## Example of POSTMAN call
+<ins> Note: </ins> 44302 is the port number
 ### POST
 Call URL https://localhost:44302/api/pay/ with POST with JSON:
 
