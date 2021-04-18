@@ -61,7 +61,7 @@ Call URL https://localhost:44364/api/InventoryItems/6 with PUT with JSON:
 }
 ```
 ### GET
-Call URL https://localhost:44364/api/InventoryItems with GET:
+Call URL https://localhost:44364/api/InventoryItems with GET__
 This Should return list of Objects
 ```json
 [
@@ -116,7 +116,7 @@ This Should return list of Objects
 ]
 ```
 ### GET
-Call URL https://localhost:44364/api/InventoryItems/1 with GET
+Call URL https://localhost:44364/api/InventoryItems/1 with GET__
 This Should return Object with Id:1
 ```json
 {
@@ -133,6 +133,6 @@ This Should return Object with Id:1
 }
 ```
 ### DELETE
-Call URL https://localhost:44364/api/InventoryItems/6 with DELETE
+Call URL https://localhost:44364/api/InventoryItems/6 with DELETE__
 This Should delete Object with Id:6
 
