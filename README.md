@@ -34,7 +34,7 @@ update-database
 ## Example of POSTMAN call
 <ins> Note: </ins> 44302 is the port number
 ### POST
-Call URL https://localhost:44302/api/pay/ with POST with JSON:
+Call URL https://localhost:44364/api/InventoryItems with POST with JSON:
 
 ```json
 {
